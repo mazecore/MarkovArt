@@ -1,0 +1,76 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary " style="background-color: #d40063;height: 55px">
+  <span class="spacer1"></span>
+  <a class="navbar-brand" href="#">ART of ALAN  MARKOV</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <span class="spacer"></span>
+
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+
+    <ul class="navbar-nav mr-auto">
+
+         <li class="nav-item" *ngIf="userIsAuthenticated">
+           <a mat-button class="nav-link my-1" routerLink="/create" routerLinkActive="mat-accent">Upload</a>
+         </li>
+
+         <li class="nav-item" *ngIf="userIsAuthenticated">
+          <a mat-button class="nav-link my-1" routerLink="/edit" routerLinkActive="mat-accent">Edit</a>
+         </li>
+
+         <li class="nav-item" *ngIf="!userIsAuthenticated">
+            <a mat-button class="nav-link my-1" routerLink="/auth/login" routerLinkActive="mat-accent">Sign In</a>
+          </li>
+
+         <li class="nav-item" *ngIf="!userIsAuthenticated">
+            <a mat-button class="nav-link my-1" routerLink="/auth/signup" routerLinkActive="mat-accent">Sign Up</a>
+          </li>
+
+         <li class="nav-item" *ngIf="userIsAuthenticated">
+            <button mat-button class="nav-link my-1" (click)="onLogout()">Log out</button>
+          </li>
+    </ul>
+
+    <span class="spacer2"></span>
+  </div>
+</nav>
+
+<!--
+<mat-toolbar role="heading" color="primary">
+    <span class="spacer1"></span>
+    <span>
+        <a routerLink="/">ART of ALAN &emsp; MARKOV</a>
+      </span>
+    <span class="spacer"></span>
+  <span>
+    <a mat-button routerLink="/">GALLERY</a>
+  </span>
+  <span>
+      <a mat-button routerLink="/">ABOUT</a>
+    </span>
+
+  <ul>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink="/create" routerLinkActive="mat-accent">Upload</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+        <a mat-button routerLink="/edit" routerLinkActive="mat-accent">Edit</a>
+      </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/auth/login" routerLinkActive="mat-accent">Sign In</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/auth/signup" routerLinkActive="mat-accent">Register</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button mat-button (click)="onLogout()">Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>
+
+-->

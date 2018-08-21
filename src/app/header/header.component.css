@@ -1,0 +1,32 @@
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 10%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.spacer {
+  flex: auto;
+}
+
+
+.spacer1 {
+  margin-left: 10%;
+}
+.spacer2 {
+  margin-right: 13.5%;
+}
+.navlink {
+  margin-top:20%;
+}
+
+nav {
+  box-shadow: 0px 10px 50px rgba(0, 62, 143, 0.534);
+}

@@ -1,0 +1,100 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	background: #ffffff;
+  color: #fff;
+
+}
+.wrapper {
+	position: fixed;
+	top: 50%;
+	left: 0;
+  transform: translate(-50%,-50%);
+
+}
+ul {
+	list-style: none;
+}
+ul li {
+	width: 50px;
+	height: 50px;
+	background: #e59500;
+	margin: 10px 0;
+	border-radius: 3px;
+	position: relative;
+	cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+}
+ul li .fa {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+  font-size: 20px;
+
+}
+ul li.facebook {
+  background: #3b5999;
+  color: white;
+}
+ul li.twitter {
+  background: #55acee;
+  color: white;
+}
+ul li.instagram {
+  background: #e4405f;
+  color: white;
+}
+ul li.google {
+  background: #dd4b39;
+  color: white;
+}
+ul li.pinterest {
+  background: #fa0053;
+  color: white;
+}
+.slider {
+	position: absolute;
+	top: 0;
+	left: 51px;
+	width: 0px;
+	height: 50px;
+	line-height: 50px;
+	background: #ff4362;
+	text-align: center;
+	border-radius: 3px;
+	transition: all 0.2s ease;
+}
+.slider p {
+	text-transform: uppercase;
+	font-size: 16px;
+	opacity: 0;
+	font-weight: 500;
+	transition: all 0.2s ease;
+}
+ul li.facebook div.slider {
+	background: #624aac;
+}
+ul li.twitter div.slider {
+	background: #7fd5f6;
+}
+ul li.instagram div.slider {
+	background: #ff768f;
+}
+ul li.google div.slider {
+	background: #eea59c;
+}
+ul li.pinterest div.slider {
+	background: #ff576d;
+}
+ul li:hover .slider {
+	width: 180px;
+}
+ul li:hover .slider p {
+	opacity: 0.6;
+}
+p {
+  color: white;
+}

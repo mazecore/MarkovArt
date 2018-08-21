@@ -1,0 +1,23 @@
+
+mat-accordion {
+  margin: 5rem 0rem 0rem 30rem;
+  float: right;
+}
+
+mat-expansion-panel{
+  width: 70%;
+}
+mat-spinner {
+  margin: auto;
+}
+
+.post-image img {
+  width: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
