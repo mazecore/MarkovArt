@@ -33,6 +33,7 @@ mat-paginator {
   transform: scale(1.01);
   transition: all 0.3s ease;
   box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.473);
+  cursor: pointer;
 }
 
 h6, h5 {

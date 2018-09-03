@@ -13,13 +13,15 @@ import { AngularMaterialModule } from "./angular-material.module";
 import { PostsModule } from "./posts/posts.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FooterComponent } from "./footer/footer.component";
+import { FormsModule } from "@angular/forms";
+
 
 @NgModule({
   declarations: [
     HeaderComponent,
     AppComponent,
     FooterComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { FooterComponent } from "./footer/footer.component";
     AngularMaterialModule,
     PostsModule,
     FlexLayoutModule,
+    FormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

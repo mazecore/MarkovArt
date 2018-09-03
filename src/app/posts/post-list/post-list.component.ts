@@ -5,6 +5,7 @@ import { Subscription } from "rxjs";
 import { Post } from "../post.model";
 import { PostsService } from "../posts.service";
 import { AuthService } from "../../auth/auth.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-post-list",
@@ -30,7 +31,8 @@ export class PostListComponent implements OnInit, OnDestroy {
 
   constructor(
     public postsService: PostsService,
-    private authService: AuthService
+    private authService: AuthService,
+    public router: Router
   ) {}
 
   ngOnInit() {
@@ -51,6 +53,10 @@ export class PostListComponent implements OnInit, OnDestroy {
         this.userIsAuthenticated = isAuthenticated;
         this.userId = this.authService.getUserId();
       });
+  }
+
+  onSelect(post) {
+    this.router.navigate([post.id]);
   }
 
   onChangedPage(pageData: PageEvent) {
