@@ -1,6 +1,6 @@
 
 ul {
-  list-style: none;
+
   padding: 0;
   margin: 0;
   margin-right: 10%;
@@ -8,7 +8,7 @@ ul {
 }
 
 a {
-  text-decoration: none;
+
   color: white;
 }
 
@@ -27,6 +27,11 @@ a {
   margin-top:20%;
 }
 
-nav {
+.galleryButton {
+margin-right: 0.7%;
+}
+
+/*nav {
   box-shadow: 0px 10px 50px rgba(0, 62, 143, 0.534);
 }
+*/

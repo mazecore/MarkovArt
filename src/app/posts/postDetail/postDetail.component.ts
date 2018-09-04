@@ -10,16 +10,23 @@ import { PostsService } from "../posts.service";
 
 export class PostDetailComponent implements OnInit {
 
-  public postId;
-  public image;
+  public postId: string;
+  public image: string;
+  public title: string;
+  public content: string;
+  isLoading = false;
 constructor(private route: ActivatedRoute, public postService: PostsService) {}
 
 ngOnInit() {
-  const id = this.route.snapshot.paramMap.get('postId');
-  this.postId = id;
+  this.isLoading = true;
+  this.route.paramMap.subscribe(params => {
+  this.postId = params.get('postId');
+});
 
   this.postService.getPost(this.postId).subscribe((data) => {
   this.image = data.imagePath;
+  this.title = data.title;
+  this.content = data.content;
   });
 }
 

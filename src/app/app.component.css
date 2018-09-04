@@ -1,12 +1,10 @@
-p {
-  visibility: hidden;
+img {
+ width: 100%;
+
 }
 
 app-header {
 z-index: 2;
-box-shadow: 1px 1px 40px rgba(126, 0, 42, 0.719);
-
-
 top: 0;
 }
 

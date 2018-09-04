@@ -19,13 +19,13 @@ mat-paginator {
 
 }
 .card-body {
-  background-color: rgba(214, 221, 230, 0.377);
+  background-color: rgb(244, 248, 255);
 
 }
 
 .card {
   margin: 13px;
-  width: 22rem;
+  width: 15rem;
 }
 
 .card:hover {
@@ -36,7 +36,11 @@ mat-paginator {
   cursor: pointer;
 }
 
-h6, h5 {
+h6 {
   text-align: center;
+}
+
+.content {
+  font-size: 0.8em;
 }
 

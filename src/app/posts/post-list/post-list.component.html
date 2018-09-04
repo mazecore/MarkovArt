@@ -9,13 +9,13 @@
       <img class = "card-img-top" [src]="post.imagePath" alt="post.title" >
         <div class="card-body">
           <div *ngIf="!post.showDetails">
-            <h5 class="card-title">
+            <h6 class="card-title">
               <span>
                 {{post.title}}
               </span>
-            </h5>
+            </h6>
             <hr>
-            <h6>
+            <h6 class="content">
               {{ post.content }}
 
             </h6>
