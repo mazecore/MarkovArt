@@ -27,7 +27,9 @@ ngOnInit() {
   this.image = data.imagePath;
   this.title = data.title;
   this.content = data.content;
+  this.isLoading = false;
   });
+
 }
 
 }

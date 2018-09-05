@@ -12,3 +12,10 @@ main {
   margin-right: 1em;
 }
 
+.footer {
+  background-color: rgb(244, 248, 255);
+  height: 10rem;
+  padding-top: 8rem;
+}
+
+
