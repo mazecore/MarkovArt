@@ -1,6 +1,6 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light  " style="background-color: rgb(244, 248, 255);height: 55px">
   <span class="spacer1"></span>
-  <a class="navbar-brand" routerLink="/">ART of ALAN  MARKOV</a>
+  <a class="navbar-brand" routerLink="/">Art of ALAN MARKOV</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,9 +11,10 @@
 
 
 
-        <form class="form-inline my-2 my-lg-0">
-          <input type="text" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
+          <form [formGroup]="searchForm" class="form-inline my-2 my-lg-0">
+          <input type="text" class="search-input form-control mr-sm-2" formControlName="search" placeholder="Search" aria-label="Search">
+          </form>
+
 
     <ul class="navbar-nav mr-auto">
 

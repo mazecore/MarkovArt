@@ -13,7 +13,8 @@ import { AngularMaterialModule } from "./angular-material.module";
 import { PostsModule } from "./posts/posts.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FooterComponent } from "./footer/footer.component";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { SearchService } from "./posts/search.service";
 
 
 @NgModule({
@@ -31,11 +32,13 @@ import { FormsModule } from "@angular/forms";
     AngularMaterialModule,
     PostsModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    SearchService
   ],
   bootstrap: [AppComponent],
   entryComponents: [ErrorComponent]

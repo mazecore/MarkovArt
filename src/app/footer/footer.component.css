@@ -95,6 +95,87 @@ ul li:hover .slider {
 ul li:hover .slider p {
 	opacity: 0.6;
 }
-p {
+
+footer {
+z-index: 2;
+}
+
+h6 {
+  text-shadow: 2px 2px 10px #000000;
   color: white;
 }
+
+
+a:hover{
+  text-decoration:none;
+}
+
+.email {
+  background: url("https://images.unsplash.com/photo-1534511902651-6ab0ce131f2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f1ff38d33bc2a28f5c08b7936e12c239&auto=format&fit=crop&w=1189&q=80");
+  min-height: 200px;
+  padding: 100px 0px 140px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+}
+
+.email h2, .email p {
+  color: #FFF;
+  font-weight: 600;
+}
+
+#email-address {
+  margin-top: 20px;
+  border: none;
+  width:50%;
+  height:40px;
+  padding-left:10px;
+}
+
+.footer {
+  padding:100px 0px;
+color: #ccc;
+  background-color: #222;
+}
+
+
+.footer-bottom{
+background-color: #111;
+  color: #282c2d;
+  font-size: 12px;
+text-align: center;
+height: 50px;
+  line-height: 50px;
+}
+
+.footer-bottom p{
+font-size:13px;
+color: #FFF;
+}
+
+.footer-top{
+background-color: #f7f7f7;
+  text-align: center;
+}
+
+.footer-top .social-icons{
+ padding:50px 0px;
+}
+
+.footer-top .social-icons i{
+padding:0px 20px;
+font-size:20px;
+color: #aaa;
+}
+
+.footer-top .social-icons i:hover{
+color:#1e76a8;
+}
+
+.logo{
+ color:#FFF;
+ font-size:30px;
+ font-weight:600;
+}
+
