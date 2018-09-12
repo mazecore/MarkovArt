@@ -1,3 +1,5 @@
+// Roter guard protects routes from unauthenticated access
+
 import {
   CanActivate,
   ActivatedRouteSnapshot,

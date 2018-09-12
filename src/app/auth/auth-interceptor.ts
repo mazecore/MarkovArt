@@ -1,3 +1,4 @@
+// Attaches user token to Http requests.
 import {
   HttpInterceptor,
   HttpRequest,

@@ -1,3 +1,5 @@
+// Connects error data with an error components
+
 import { Subject } from "rxjs";
 import { Injectable } from "@angular/core";
 
