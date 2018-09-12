@@ -1,3 +1,5 @@
+// Imports authorization and authentication modules and components
+
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";

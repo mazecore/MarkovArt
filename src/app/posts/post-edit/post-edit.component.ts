@@ -1,5 +1,8 @@
+/* A hidden page that appears after authentication,
+ * where posts can be updated
+ */
+
 import { Component, OnInit, OnDestroy } from "@angular/core";
-import { PageEvent } from "@angular/material";
 import { Subscription } from "rxjs";
 
 import { Post } from "../post.model";
@@ -12,11 +15,7 @@ import { AuthService } from "../../auth/auth.service";
   styleUrls: ["./post-edit.component.css"]
 })
 export class PostEditComponent implements OnInit, OnDestroy {
-  // posts = [
-  //   { title: "First Post", content: "This is the first post's content" },
-  //   { title: "Second Post", content: "This is the second post's content" },
-  //   { title: "Third Post", content: "This is the third post's content" }
-  // ];
+
   posts: Post[] = [];
   isLoading = false;
   totalPosts = 0;

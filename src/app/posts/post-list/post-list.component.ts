@@ -1,7 +1,14 @@
+/*
+ * What it does:
+ * Renders the list of posts(images with comments)
+ * Communicates with the posts.service.ts to access json files from the back-end.
+ * Communicates with the search.service.ts to pass the searching parameters from the header searchbar.
+ * Implements pagination.
+ */
+
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { PageEvent } from "@angular/material";
 import { Subscription } from "rxjs";
-import { HeaderComponent } from "../../header/header.component";
 import { Post } from "../post.model";
 import { PostsService } from "../posts.service";
 import { AuthService } from "../../auth/auth.service";
@@ -40,6 +47,8 @@ export class PostListComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
+    // Authentication and post retrieval
+
     this.isLoading = true;
     this.postsService.getPosts(this.postsPerPage, this.currentPage);
     this.userId = this.authService.getUserId();
@@ -57,13 +66,20 @@ export class PostListComponent implements OnInit, OnDestroy {
         this.userIsAuthenticated = isAuthenticated;
         this.userId = this.authService.getUserId();
       });
+/*
+      Communication with the search.service.ts to pass the searching parameters from the header searchbar.
+*/
       this.searchService.currentQuery.subscribe(query => this.query = query);
       this.searchService.changeQuery(this.query);
   }
 
+// Navigation to the generated page with details about each post.
+
   onSelect(post) {
     this.router.navigate([post.id]);
   }
+
+/* Pagination */
 
   onChangedPage(pageData: PageEvent) {
     this.isLoading = true;

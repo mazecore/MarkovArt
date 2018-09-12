@@ -1,3 +1,5 @@
+ // Module that imports modules and componenets that are used to create and edit posts.
+
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";

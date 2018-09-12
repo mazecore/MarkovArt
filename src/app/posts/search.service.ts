@@ -1,3 +1,6 @@
+// A service that provides the input information from the header searchbar
+// to the list of respective posts(images)
+
 import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 

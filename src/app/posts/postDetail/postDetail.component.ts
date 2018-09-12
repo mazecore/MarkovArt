@@ -1,3 +1,5 @@
+/* Generates a page that appears after you click on a post(image) on the home page */
+
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { PostsService } from "../posts.service";

@@ -1,6 +1,6 @@
+// A pipe for filtering out the results in the search bar
+
 import { Pipe, PipeTransform } from "@angular/core";
-
-
 
 @Pipe({
   name: 'search'
