@@ -12,7 +12,7 @@ mongoose
   .connect(
     "mongodb+srv://Ildar:" +
       process.env.MONGO_ATLAS_PW +
-      "@cluster0-kkg1b.mongodb.net/angular-base"
+      "@cluster0-kkg1b.mongodb.net/angular-base", { useNewUrlParser: true }
   )
   .then(() => {
     console.log("Connected to database!");

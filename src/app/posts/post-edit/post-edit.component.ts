@@ -36,20 +36,18 @@ export class PostEditComponent implements OnInit, OnDestroy {
     this.isLoading = true;
     this.postsService.getPosts(this.postsPerPage, this.currentPage);
     this.userId = this.authService.getUserId();
-    this.postsSub = this.postsService
-      .getPostUpdateListener()
-      .subscribe((postData: { posts: Post[]; postCount: number }) => {
-        this.isLoading = false;
-        this.totalPosts = postData.postCount;
-        this.posts = postData.posts;
-      });
+    this.postsSub = this.postsService.postsUpdated
+          .subscribe((postData: { posts: Post[]; postCount: number }) => {
+            this.isLoading = false;
+            this.totalPosts = postData.postCount;
+            this.posts = postData.posts;
+          });
     this.userIsAuthenticated = this.authService.getIsAuth();
-    this.authStatusSub = this.authService
-      .getAuthStatusListener()
-      .subscribe(isAuthenticated => {
-        this.userIsAuthenticated = isAuthenticated;
-        this.userId = this.authService.getUserId();
-      });
+    this.authStatusSub = this.authService.getAuthStatusListener()
+          .subscribe(isAuthenticated => {
+            this.userIsAuthenticated = isAuthenticated;
+            this.userId = this.authService.getUserId();
+          });
   }
 
   onDelete(postId: string) {
