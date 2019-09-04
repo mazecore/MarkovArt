@@ -16,7 +16,7 @@ export class PostDetailComponent implements OnInit {
   public image: string;
   public title: string;
   public content: string;
-  isLoading = false;
+  isLoading = true;
 constructor(private route: ActivatedRoute, public postService: PostsService) {}
 
 ngOnInit() {
