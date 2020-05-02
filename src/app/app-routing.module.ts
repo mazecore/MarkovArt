@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: "create", component: PostCreateComponent, canActivate: [AuthGuard] },
   { path: "edit", component: PostEditComponent, canActivate: [AuthGuard]},
   { path: "edit/:postId", component: PostCreateComponent, canActivate: [AuthGuard] },
-  { path: "auth", loadChildren: "./auth/auth.module#AuthModule"},
+  { path: "auth", loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
   { path: ":postId", component: PostDetailComponent },
   { path: "**", redirectTo: '/'}
 ];

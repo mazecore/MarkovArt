@@ -8,12 +8,12 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {}
-      ,
+      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/art-portfolio",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -32,11 +32,17 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-    "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -133,6 +139,7 @@
   "cli": {
     "warnings": {
       "typescriptMismatch": true
-    }
+    },
+    "analytics": "cd7eabc8-f773-408a-8ef5-4eb9e907502f"
   }
 }
