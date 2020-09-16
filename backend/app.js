@@ -12,12 +12,13 @@ mongoose
   .connect(
     "mongodb+srv://Ildar:" +
       process.env.MONGO_ATLAS_PW +
-      "@cluster0-kkg1b.mongodb.net/angular-base", { useNewUrlParser: true }
+      "@cluster0-kkg1b.mongodb.net/angular-base", { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
     console.log("Connected to database!");
   })
-  .catch(() => {
+  .catch((err) => {
+    console.error(err);
     console.log("Connection failed!");
   });
 
